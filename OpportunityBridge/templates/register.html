@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cool Login form | By Code Info</title>
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/register.css'  %}" />
+   <!-- Font Awesome Cdn Link -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<body>
+  <div class="wrapper">
+    <form>
+      <input type="text" placeholder="Enter username">
+      <input type="email" placeholder="Enter Email">
+      <input type="number" placeholder="Phone Number">
+      <input type="password" placeholder="Password">
+      <input type="password" placeholder="Confirm Password">
+      
+    <closeform></closeform></form>
+    <button>Sign in</button>
+    <div class="not-member">
+      Not a member? <a href="{% url 'login' %}">login Now</a>
+    </div>
+  </div>
+</body>
+</html>
