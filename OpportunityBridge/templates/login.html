@@ -12,14 +12,15 @@
   <div class="wrapper">
     <h1>Hello Again!</h1>
     <p>Welcome back you've <br> been missed!</p>
-    <form>
-      <input type="text" placeholder="Enter username">
-      <input type="password" placeholder="Password">
+    <form method="post">
+      {% csrf_token %}
+      <input type="text" name="mail" placeholder="Enter username">
+      <input type="password" name="pass" placeholder="Password">
       <p class="recover">
         <a href="#">Recover Password</a>
       </p>
-    <closeform></closeform></form>
-    <button>Sign in</button>
+    <button type="submit">Sign in</button>
+  </form>
     <p class="or">
       ----- or continue with -----
     </p>

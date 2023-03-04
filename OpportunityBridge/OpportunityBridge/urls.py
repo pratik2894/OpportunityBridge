@@ -19,7 +19,8 @@ from OpportunityBridge import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.login, name="login"),
+    path('', views.SignIn, name="SignIn"),
     path('register/', views.register, name="register"),
+    path('logout/' , views.logout , name="logout")
 ]
 

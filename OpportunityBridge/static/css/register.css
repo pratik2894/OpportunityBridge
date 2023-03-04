@@ -42,7 +42,7 @@ form input{
   text-decoration: none;
   color: #07001f;
 }
-button{
+.but{
   font-size: 1.1rem;
   margin-top: 1rem;
   padding: 8px 0;
@@ -54,7 +54,7 @@ button{
   color: #fff;
   cursor: pointer;
 }
-button:hover{
+.but:hover{
   background: rgba(122, 30, 30, 0.767);
 }
 .or{
