@@ -13,12 +13,13 @@ def SignIn(request):
     if request.method =="POST":
         uname=request.POST['mail']
         pass2 = request.POST['pass']
-        print(uname,pass2)
         user = authenticate(username = uname , password=pass2)
         if user is not None:
             auth_login(request,user)
             fname = user.first_name
             return render(request , "index.html",{'fname' : fname})
+        else:
+            messages.error(request , "User Enter Invalid Credentials")
 
     return render(request, "login.html")
 def register(request):
@@ -56,10 +57,11 @@ def register(request):
         mail = EmailMultiAlternatives(subject,msg,from_email,[to])
         mail.content_subtype='html'
         mail.send()
-        return redirect("login")
+        messages.success(request,"Account Created Succesfully")
     
         print(username,email,number,pass1,pass2,first)
     return render(request, "register.html")
 
-def logout(request):
-    return render(request , "login.html")
+def Logout(request):
+    logout(request)
+    return redirect('')
