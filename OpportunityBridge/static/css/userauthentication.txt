@@ -1,0 +1,107 @@
+Login------------------------------->
+
+    # if request.method == 'POST':
+    #     username = request.POST['calling']
+    #     password = request.POST['passcode']
+    #     user = authenticate(request, username =username, password = password)
+ 
+    #     if user is not None:
+    #         login(request,user)
+    #         return redirect('/')
+    #     else:
+    #         return redirect('/Login')
+    
+
+
+    # if request.method=='POST':
+    #     call=request.POST['calling']
+    #     cpassword=request.POST['passcode']
+    #     user=authenticate(request, username =call, password = cpassword)
+    #     print(user)
+    #     if user is not None:
+    #         login(request,user)
+    #         return redirect('/')
+    #     else:
+    #         form = AuthenticationForm()
+    #         return render(request,'index.html',{'form':form})
+    # else:
+    #     form = UserCreationForm()
+    #     return render(request,'SignUp.html',{'form':form})
+
+
+
+
+
+-------------------------------------------------------------------> Signup
+
+# if request.method =='POST':
+    #     print(request.POST)
+    #     fname = request.POST['fname']
+    #     contact = request.POST['mobile']
+    #     email = request.POST['email']
+    #     password = request.POST['password']
+    #     cnfpassword = request.POST['password2']
+
+    #     if len(contact)!=10:
+    #         messages.error(request,'number should be 10 digit')
+    #         return redirect('/SignUp')
+    #     elif len(password)<4:
+    #         messages.error(request,'password size should be greater than 4')
+    #         return redirect('/SignUp')
+    #     elif password!=cnfpassword:
+    #         messages.error(request,'password did not match!')
+    #         return redirect('/SignUp')
+    #     else:
+    #         user = User.objects.create(username=contact,email=email,password=cnfpassword)
+    #         user.first_name=fname
+    #         user.last_name=fname
+    #         user.save()
+    #         return redirect('/Login')
+
+
+
+#     if request.user.is_authenticated:
+#         return redirect('/')
+
+#         if request.method == 'POST':
+#             print(request.POST)
+#             name = request.POST['fname']
+#             email = request.POST['email']
+#             mobile = request.POST['mobile']
+#             password = request.POST['password']
+#             password2 = request.POST['password2']
+#             if len(mobile)!=10 :
+#                 messages.error(request , "invalid mobile number")
+#                 return HttpResponseRedirect('/SignUp')
+#             # elif len(password) !=5 :
+#             #     messages.error(request , "password length must be greater than 5")
+#             #     return HttpResponseRedirect('/SignUp')
+#             elif password != password2 :
+#                 messages.error(request , "password did not match")
+#                 return HttpResponseRedirect('/SignUp')
+#             else:
+#                 users = User.objects.create(username=mobile,email=email,password=password2)
+#                 users.first_name = name
+#                 users.last_name = name
+#                 users.save()
+#                 messages.success(request , "your account created successfully")
+#                 return HttpResponseRedirect('/Login')
+
+    # return render(request,'SignUp.html')
+
+
+
+
+#--------------------------------------------------------------------------> Logout 
+# def Logout(request):
+#     logout(request)
+#     return redirect('/')
+
+
+
+
+
+
+gogole password for mailing system ---------------->
+didalivcjiivfanp
+didalivcjiivfanp

@@ -1,0 +1,56 @@
+
+<!-- <!DOCTYPE html>
+<!-- === Coding by CodingLab | www.codinglabweb.com === -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- ===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <!-- ===== CSS ===== -->
+    <link rel="stylesheet" href="/static/css/ForgotUser.css">
+         
+    <!--<title>Login & Registration Form</title>-->
+</head>
+<body>
+{% for message in messages %}
+
+<div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+  <strong>Alert</strong> {{message}}
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+  </div>
+
+{% endfor %}
+    <div class="container">
+        <div class="forms"  >
+            <div class="form login">
+                <span class="title">Forgot Password ?</span>
+
+                <form method="post" >
+                    {% csrf_token %}
+                    {{form}}
+                    <div class="input-field">
+                        <input type="email" placeholder="Enter your Email" value = "username" required>
+                        <i class="uil uil-envelope icon"></i>
+                    </div>
+
+                    <div class="input-field button">
+                        <input type="submit" name="send email">
+                    </div>
+                </form>
+            </div>
+
+            <!-- Registration Form -->
+
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/js/ForgotUser.js"></script>
+
+</body>
+</html> -->

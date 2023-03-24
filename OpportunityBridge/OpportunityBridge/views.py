@@ -17,7 +17,7 @@ def SignIn(request):
         if user is not None:
             auth_login(request,user)
             fname = user.first_name
-            return render(request , "index.html",{'fname' : fname})
+            return redirect("home")
         else:
             messages.error(request , "User Enter Invalid Credentials")
 
@@ -65,3 +65,6 @@ def register(request):
 def Logout(request):
     logout(request)
     return redirect('')
+
+def home(request):
+    return render( request ,"index.html")
