@@ -453,7 +453,8 @@ section{
 }
 
 .newsletter{
-    background:url(../image/letter-bg.jpg) no-repeat;
+    
+    background: url("/static/images/letter-bg.jpg");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;

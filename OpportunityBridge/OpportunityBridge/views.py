@@ -8,6 +8,8 @@ from django.contrib.auth import authenticate,logout
 from django.contrib.auth import login as auth_login
 from django.core.mail import send_mail
 from django.core.mail import EmailMultiAlternatives
+from banner.models import Banner
+
 
 def SignIn(request):
     if request.method =="POST":
@@ -67,4 +69,8 @@ def Logout(request):
     return redirect('')
 
 def home(request):
-    return render( request ,"index.html")
+    head=Banner.objects.all()
+    head_data={
+        'head':head,
+    }
+    return render(request,"index.html" , head_data)
